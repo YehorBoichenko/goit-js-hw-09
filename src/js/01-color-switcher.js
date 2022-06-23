@@ -12,7 +12,7 @@ const colorSwitcher = function () {
   body.style.color = getRandomHexColor();
 };
 
-startBtn.addEventListener('click', () => {
+startBtn.addEventListener('click', event => {
   timerId = setInterval(colorSwitcher, 1000);
   startBtn.disabled = true;
 });

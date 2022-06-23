@@ -16,7 +16,6 @@ function generatePromise(event) {
   const amountValue = amount.valueAsNumber;
 
   for (let i = 0; i <= amountValue; i++) {
-    delay += delayStepMs;
     createPromise(i + 1, delay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
@@ -28,6 +27,7 @@ function generatePromise(event) {
           `❌ Rejected promise ${position} in ${delay}ms`
         );
       });
+    delay += delayStepMs;
   }
 }
 

@@ -6,7 +6,7 @@ const stopBtn = document.querySelector('button[data-stop]');
 const body = document.querySelector('body');
 
 let timerId = null;
-
+startBtn.disabled = false;
 const colorSwitcher = function () {
   body.style.backgroundColor = getRandomHexColor();
   body.style.color = getRandomHexColor();

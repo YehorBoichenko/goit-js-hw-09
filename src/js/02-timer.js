@@ -34,9 +34,7 @@ const options = {
         timer = setInterval(() => {
           startBtn.disabled = true;
 
-          const dateChoosen = new Date(
-            choosenDate.value.replace(/-/g, '/')
-          ).getTime();
+          const dateChoosen = new Date(choosenDate.value).getTime();
           const currentTime = new Date().getTime();
           const timeLeft = dateChoosen - currentTime;
 
